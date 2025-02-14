@@ -14,7 +14,7 @@ spring:
    # password:
 
     # for postgres db
-    url: jdbc:postgresql://localhost:5432/capstone
+    url: jdbc:postgresql://localhost:5432/hackathon
     username: postgres
     password: Cloud@123$
 
