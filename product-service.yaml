@@ -9,7 +9,7 @@ spring:
   # Database configuration
   datasource:
     # for mysql db
-    url: jdbc:mysql://localhost:3306/capstone
+    url: jdbc:mysql://localhost:3306/hackathon
     username: root
     password:
 
@@ -19,7 +19,7 @@ spring:
     #password: Cloud@123$
 
     # for h2 db
-#    url: jdbc:h2:mem:capstone
+#    url: jdbc:h2:mem:hackathon
 #    username: accounts
 #    password:
 #    initialization-mode: always
