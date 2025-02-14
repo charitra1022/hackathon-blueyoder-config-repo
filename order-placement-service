@@ -1,0 +1,60 @@
+spring:
+  application:
+    name: order-placement-service
+  devtools:
+    restart:
+      poll-interval: 2s
+      quiet-period: 1s
+
+  # Database configuration
+  datasource:
+    # for mysql db
+    #url: jdbc:mysql://localhost:3306/capstone
+    #username: root
+   # password:
+
+    # for postgres db
+    url: jdbc:postgresql://localhost:5432/hackathon
+    username: postgres
+    password: Cloud@123$
+
+    # for h2 db
+#    url: jdbc:h2:mem:capstone
+#    username: accounts
+#    password:
+#    initialization-mode: always
+#    schema: classpath:/schema.sql
+#    data: classpath:/data.sql
+
+
+  #Hibernate Configuration - database configuration is also required
+  jpa:
+    hibernate.ddl-auto: update
+    show-sql: true
+
+#  properties:
+#    hibernate:
+#      dialect: org.hibernate.dialect.MySQL8Dialect
+#      dialect: org.hibernate.dialect.PostgreSQLDialect
+
+
+
+debug: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+server:
+  port: 7080
+
+custom-message: "This is message from config file of bankingapp-account-service via config server."
